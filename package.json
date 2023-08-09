@@ -8,8 +8,10 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-confetti": "^2.3.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
