@@ -53,7 +53,7 @@
 
     </div>
     <br>
-    Creado por Agu en el curso de Vue 3 [practicas de Js] 2023. 
+    Creado por Agu en el curso de Vue 3 [practicas de Js] 2023.
 </template>
 
 <script>
@@ -113,7 +113,7 @@ export default {
 
         },
         newGame() {
-                this.showPokemon = false,
+            this.showPokemon = false,
                 this.showAnswer = false,
                 this.pokemonArr = [],
                 this.pokemon = null,
@@ -143,32 +143,47 @@ export default {
 </script>
 
 <style scoped>
-.header{
+.header {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    box-shadow: 3px 9px 5px -7px rgba(0,0,0,0.29);
+    box-shadow: 3px 9px 5px -7px rgba(0, 0, 0, 0.29);
     background-color: #e74c3c;
     border-radius: 12px;
     justify-content: center;
     top: 0px;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 12px;
+   
 }
-@media (max-width: 768px) {
+
+@media (max-width: 400px) {
     .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 75px;
+        box-shadow: 3px 9px 5px -7px rgba(0, 0, 0, 0.29);
+        background-color: #e74c3c;
+        border-radius: 12px;
+        justify-content: center;
+        margin-bottom: 12px;
+        top: 0px;
         margin-left: 2%;
         margin-right: 2%;
     }
-    h1{
+
+
+
+}
+
+h1 {
     font-family: 'Pokemon Solid', sans-serif;
     color: #ffffff;
-    font-size: 3.5rem;
+    font-size: 2rem;
 }
-}
-h1{
-    font-family: 'Pokemon Solid', sans-serif;
-    color: #ffffff;
-    font-size: 4rem;
-}
+
 .input {
     margin-bottom: 24px;
     width: 80%;
@@ -189,17 +204,14 @@ h1{
 }
 
 .message {
-    background-color: #ffffff;
     border-radius: 25px;
     width: 300px;
     margin-bottom: 20px;
     position: absolute;
-    margin-top: 420px; 
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-top: 420px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .button {
@@ -217,8 +229,6 @@ h1{
 .button:hover {
     background-color: #fa7f45;
 }
-
-
 
 .action-button {
     background-color: #ff3822;
@@ -247,5 +257,4 @@ td {
 
 th {
     background-color: #f2f2f2;
-}
-</style>
+}</style>
