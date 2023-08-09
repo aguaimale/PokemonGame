@@ -1,10 +1,14 @@
 <template>
+    <div class="header">
+        <h1>POKEMON GAME</h1>
+    </div>
     <h2 v-if="!pokemon"> Espera por favor ...</h2>
     <div class="container" v-else="pokemon">
         <div>
             <Vidas :vidas="vidas" :vidasRestantes="vidasRestantes" />
         </div>
-        <h2>¿Quién es este pokémon?</h2>
+        <br>
+        <h2>¿Quién es este Pokémon?</h2>
         <!--imagen-->
         <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon" />
         <!--opciones-->
@@ -48,6 +52,8 @@
         </div>
 
     </div>
+    <br>
+    Creado por Agu en el curso de Vue 3 [practicas de Js] 2023. 
 </template>
 
 <script>
@@ -107,7 +113,7 @@ export default {
 
         },
         newGame() {
-            this.showPokemon = false,
+                this.showPokemon = false,
                 this.showAnswer = false,
                 this.pokemonArr = [],
                 this.pokemon = null,
@@ -137,6 +143,32 @@ export default {
 </script>
 
 <style scoped>
+.header{
+    align-items: center;
+    box-shadow: 3px 9px 5px -7px rgba(0,0,0,0.29);
+    background-color: #e74c3c;
+    border-radius: 12px;
+    justify-content: center;
+    top: 0px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+@media (max-width: 768px) {
+    .header {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    h1{
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffffff;
+    font-size: 3.5rem;
+}
+}
+h1{
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffffff;
+    font-size: 4rem;
+}
 .input {
     margin-bottom: 24px;
     width: 80%;
@@ -161,6 +193,13 @@ export default {
     border-radius: 25px;
     width: 300px;
     margin-bottom: 20px;
+    position: absolute;
+    margin-top: 420px; 
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .button {
@@ -170,22 +209,19 @@ export default {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #69b3e4;
+    background-color: #e74c3c;
     color: white;
     margin-bottom: 20px;
 }
 
 .button:hover {
-    background-color: #2980b9;
+    background-color: #fa7f45;
 }
 
-.button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
+
 
 .action-button {
-    background-color: #e74c3c;
+    background-color: #ff3822;
 }
 
 .tablecontainer {
@@ -193,14 +229,12 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
 
 }
 
 table {
     border-collapse: collapse;
-    width: 80%;
+    width: 40%;
     margin-top: 10px;
 }
 

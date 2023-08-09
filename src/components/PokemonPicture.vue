@@ -40,6 +40,7 @@ computed: {
 /* Pokemon Picture */
 .pokemon-container {
   height: 200px;
+ 
 }
 
 
