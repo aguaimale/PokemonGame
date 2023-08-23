@@ -1,3 +1,14 @@
+JUEGO DE POKEMON
+LINK:
+https://pokemongamebyagu.netlify.app/
+
+
+
+
+
+
+
+
 # 04-pokemon-game
 
 ## Project setup
